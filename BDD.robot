@@ -48,7 +48,7 @@ I have entered the registration information
     Select From List By Value    xpath=//input[contains(@id,’yy_dt_8’’)]    ${Year}
     Input Text  xpath=//input[contains(@id,’phone_9’)]    ${Phone}
     Input Text  xpath=//input[contains(@id,’email_1’)] ${Email}
-	Input Text  xpath=//input[contains(@id,’username’)] ${USER}
+    Input Text  xpath=//input[contains(@id,’username’)] ${USER}
     Input Text  xpath=//input[contains(@id,’description’)]    ${About Text}
     Input Password    xpath=//input[contains(@id,’password_2’)]    ${PASSWORD}
     Input Password    xpath=//input[contains(@id,’confirm_password_password_2’)]    ${CONFIRM PASSWORD}
