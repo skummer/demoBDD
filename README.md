@@ -1,8 +1,13 @@
 # demoBDD
 Demo of a Gherkin script to login and register a user for TOOLS QA - using Robot Framework
+
+
 BDD.robot - A test suite with a single Gherkin style test.
+
 This test is functionally identical to the feature description below.
-A resource file with reusable keywords and variables is not used since it is a simple example. They are included as part of the test script.
+A resource file with reusable keywords and variables is not used since it is a simple example. 
+
+Variables and Keywords are included as part of the test script.
 They utilize keywords provided by the imported Selenium2Library
 
 Running BDD.robot:
