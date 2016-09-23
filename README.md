@@ -34,6 +34,7 @@ Preconditions:
 
 
 Feature: Registration test
+
 Description: This feature will test successful registration
 
 Scenario: Successful registration with valid login information (Happy Case)
