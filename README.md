@@ -28,9 +28,12 @@ BDD.robot generates a log file and a report called, log.html and report.html
 
 
 Preconditions: 
-        o	A precondition for running the tests is having Robot Framework and Selenium2Library installed, and they in turn require Python. 
-        o	Robot Framework installation instructions cover both Robot and Python installations. 
-        o	Selenium2Library has its own installation instructions.
+                          o	Having Robot Framework and Selenium2Library installed, and they in turn require Python.
+                          
+                          o	Robot Framework installation instructions cover both Robot and Python installations. 
+                          
+                          o	Selenium2Library has its own installation instructions.
+                    
 
 
 Feature: Registration test
