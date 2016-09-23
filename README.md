@@ -31,7 +31,9 @@ Description: This feature will test successful registration
 Scenario: Successful registration with valid login information (Happy Case)
 
 Given I have launched the browser and I have opened the registration page
+
 WHEN I have entered the registration information and I have pressed submit button
+
 THEN I should see the thank you message
 
 Keywords:
