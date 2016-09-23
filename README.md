@@ -32,8 +32,10 @@ Preconditions:
             o  Having Robot Framework and Selenium2Library installed, and they in turn require Python. 
 
             o  Robot Framework installation instructions cover both Robot and Python installations. 
+                        http://robotframework.org
             
             o  Selenium2Library has its own installation instructions.
+                        http://robotframework.org/Selenium2Library/Selenium2Library.html#Introduction
            
                     
 
