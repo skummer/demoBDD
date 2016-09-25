@@ -51,4 +51,13 @@ Scenario: Successful registration with valid login information (Happy Case)
         o	THEN I should see the thank you message
 
         Keywords:
-			
+			1.	I have launched the browser
+			2.	I have opened the registration page
+			3.	I have entered the registration information
+			4.	I have pressed the submit button
+			5.  I have launched the browser and I have opened the registration page
+			6.  I have entered the registration information and I have pressed submit button
+			7.	I should see the thank you message
+			8.	Page does not contain missing field error message
+			9.	Page does not contain password length error message
+	
