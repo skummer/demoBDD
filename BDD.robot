@@ -1,33 +1,37 @@
-
 *** Settings ***
 Library           Selenium2Library
 
 *** Variables ***
 ${URL}            http://demoqa.com/registration/
 ${BROWSER}        firefox
-${USER}           mHero
-${Email}          mHero@yahoo.com
-${PASSWORD}       mHERO1234%
-${CONFIRM PASSWORD}    mHERO1234%
+${USER}           spHero
+${Email}          spHero@aol.com
+${PASSWORD}       sHERO1234%
+${CONFIRM PASSWORD}    sHERO1234%
 ${TITLE}          TOOLS
 ${Heading}        Registration | Demoqa
 ${THANK YOU MSG}    Thank you for your registration
-${First Name}     Man
+${First Name}     Superman
 ${Last Name}      Hero
-${Phone}          8889991212
-${About Text}     My name is mHero
+${Phone}          5559991212
+${About Text}     I am a Super Hero.
 ${Country}        Australia
 ${Month}          12
 ${Day}            22
-${Year}           1990
-${ERR MSG}        *This field is required
-${PASSWORD ERR}    *Minimum 8 characters required
+${Year}           1995
+${MISSING FIELD ERR MSG}    *This field is required
+${PASSWORD LENGTH ERR}    *Minimum 8 characters required
+${INVALID PHONE ERR}    *Minimum 10 Digits starting with Country Code
+${INVALID EMAIL ERR}    *Invalid email address
+${DUPLICATE USER}    Error: Username already exists
+${DUPLICATE EMAIL}    Error: E-mail address already exists
+${MISMATCH ERR}    Mismatch
 
 *** Test Cases ***
 Registration Test
     Given I have launched the browser and I have opened the registration page
-    When I have entered the registration information and I have pressed submit button
-    Then I should see the thank you message
+    When I have entered the registration information and Page has valid registration information
+    Then I press the submit button and I should see the thank you message
 
 *** Keywords ***
 I have launched the browser
@@ -54,24 +58,28 @@ I have entered the registration information
     Input Password    id=password_2    ${PASSWORD}
     Input Password    id=confirm_password_password_2    ${CONFIRM PASSWORD}
 
-I have pressed the submit button
+Page has valid registration information
+    Page Should Not Contain    ${MISSING FIELD ERR MSG}
+    Page Should Not Contain    ${PASSWORD LENGTH ERR}
+    Page Should Not Contain    ${INVALID PHONE ERR}
+    Page Should Not Contain    ${INVALID EMAIL ERR}
+
+I press the submit button
     Click Element    name=pie_submit
+
+I should see the thank you message
+    Page Should Not Contain    ${DUPLICATE USER}
+    Page Should Not Contain    ${DUPLICATE EMAIL}
+    Page Should Contain    ${THANK YOU MSG}
 
 I have launched the browser and I have opened the registration page
     I have launched the browser
     I have opened the registration page
 
-I have entered the registration information and I have pressed submit button
+I have entered the registration information and Page has valid registration information
     I have entered the registration information
-    Page does not contain missing field error message
-    Page does not contain password length error message
-    I have pressed the submit button
+    Page has valid registration information
 
-I should see the thank you message
-    Page Should Contain    ${THANK YOU MSG}
-
-Page does not contain missing field error message
-    Page Should Not Contain    ${ERR MSG}
-
-Page does not contain password length error message
-    Page Should Not Contain    ${PASSWORD ERR}
+I press the submit button and I should see the thank you message
+    I press the submit button
+    I should see the thank you message
