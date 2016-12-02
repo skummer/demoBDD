@@ -53,11 +53,12 @@ Scenario: Successful registration with valid login information (Happy Case)
 
 
         Keywords:
-			1.	I have launched the browser
-			2.	I have opened the registration page
-			3.	I have entered the registration information
-			4.	Page has valid registration 
-			5.  	I press the submit button
-			6.	I should see the thankyou message
+	1.	I have launched the browser
+	2.	I have opened the registration page
+	3.	I have entered the registration information
+	4.	Page has valid registration 
+	5.	I press the submit button
+	6.	I should see the thank you message
+
 				
 	
